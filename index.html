@@ -15,13 +15,13 @@
     <!-- Carga de dos fuentes contrastantes: Bebas Neue para títulos, Inter para cuerpo -->
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 
-    <!-- Configuración personalizada de Tailwind para el color Neon Green y fuentes -->
+    <!-- Configuración personalizada de Tailwind para el color Neon Purple y fuentes -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'neon-green': '#39FF14', // Verde Neón Vibrante
+                        'neon-purple': '#D400FF', // Morado Neón Vibrante (antes neon-green)
                         'deep-black': '#0a0a0a', // Un negro muy profundo
                     },
                     fontFamily: {
@@ -30,8 +30,9 @@
                     },
                     keyframes: {
                         'neon-glow': {
-                            '0%, 100%': { 'text-shadow': '0 0 5px #39FF14, 0 0 10px #39FF14', 'border-color': '#39FF14' },
-                            '50%': { 'text-shadow': '0 0 10px #39FF14, 0 0 20px #39FF14', 'border-color': 'rgba(57, 255, 20, 0.5)' },
+                            // Colores actualizados a morado neón (#D400FF)
+                            '0%, 100%': { 'text-shadow': '0 0 5px #D400FF, 0 0 10px #D400FF', 'border-color': '#D400FF' },
+                            '50%': { 'text-shadow': '0 0 10px #D400FF, 0 0 20px #D400FF', 'border-color': 'rgba(212, 0, 255, 0.5)' },
                         },
                         'scan-line': {
                             '0%': { 'background-position': '-200% 0' },
@@ -61,25 +62,25 @@
             overflow-x: hidden; /* Evita el scroll horizontal */
         }
         .neon-text {
-            color: #39FF14;
-            text-shadow: 0 0 5px #39FF14;
+            color: #D400FF; /* Morado Neón */
+            text-shadow: 0 0 5px #D400FF; /* Morado Neón */
             font-family: 'Bebas Neue', sans-serif;
             letter-spacing: 2px;
         }
         .neon-button {
             transition: all 0.3s ease;
-            box-shadow: 0 0 10px rgba(57, 255, 20, 0.6);
-            border: 2px solid #39FF14;
+            box-shadow: 0 0 10px rgba(212, 0, 255, 0.6); /* Morado Neón RGBA */
+            border: 2px solid #D400FF; /* Morado Neón */
         }
         .neon-button:hover {
-            background-color: #39FF14;
+            background-color: #D400FF; /* Morado Neón */
             color: #0a0a0a;
-            box-shadow: 0 0 20px #39FF14, 0 0 40px rgba(57, 255, 20, 0.5);
+            box-shadow: 0 0 20px #D400FF, 0 0 40px rgba(212, 0, 255, 0.5); /* Morado Neón RGBA */
             transform: scale(1.05);
         }
         /* Estilo para el efecto de escaneo en el texto */
         .scan-text {
-            background: linear-gradient(90deg, #0a0a0a 0%, #39FF14 50%, #0a0a0a 100%);
+            background: linear-gradient(90deg, #0a0a0a 0%, #D400FF 50%, #0a0a0a 100%); /* Morado Neón */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-size: 200% 100%;
@@ -91,8 +92,8 @@
             font-family: 'Bebas Neue', sans-serif;
             letter-spacing: 4px;
             font-weight: 900;
-            text-shadow: 0 0 5px #39FF14;
-            border-bottom: 3px solid #39FF14;
+            text-shadow: 0 0 5px #D400FF; /* Morado Neón */
+            border-bottom: 3px solid #D400FF; /* Morado Neón */
             animation: neon-glow 3s ease-in-out infinite alternate;
         }
 
@@ -126,11 +127,11 @@
 <body>
 
     <!-- NAV/HEADER -->
-    <header class="fixed top-0 left-0 w-full z-50 p-4 bg-deep-black bg-opacity-90 border-b border-neon-green/30">
+    <header class="fixed top-0 left-0 w-full z-50 p-4 bg-deep-black bg-opacity-90 border-b border-neon-purple/30">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <!-- LOGO: 4 DIGITAL ESSENCE -->
             <a href="#" class="text-2xl font-heading neon-text tracking-widest transition duration-500 hover:scale-105">4 DIGITAL ESSENCE</a>
-            <a href="#precio" class="text-sm font-bold py-1 px-3 rounded-full border border-neon-green text-neon-green transition duration-300 hover:bg-neon-green hover:text-black hover:shadow-lg">¡INSCRIBIRME!</a>
+            <a href="#precio" class="text-sm font-bold py-1 px-3 rounded-full border border-neon-purple text-neon-purple transition duration-300 hover:bg-neon-purple hover:text-black hover:shadow-lg">¡INSCRIBIRME!</a>
         </div>
     </header>
 
@@ -139,7 +140,7 @@
         <section id="hero" class="pt-24 pb-12 sm:pt-40 sm:pb-20 flex flex-col items-center justify-center text-center px-4 min-h-screen">
             <!-- H1 SEO: Título principal de la página y palabra clave (ANIMACIÓN DE ESCANEO) -->
             <h1 class="hero-text-large text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-heading uppercase text-white tracking-tighter mb-4 leading-none">
-                <span class="block text-neon-green/80 animate-pulse">CREA</span>
+                <span class="block text-neon-purple/80 animate-pulse">CREA</span>
                 <span class="block neon-text scan-text" style="animation: neon-glow 4s ease-in-out infinite alternate, scan-line 3s linear infinite;">TU ESTILO</span>
                 <span class="block">PROPIO</span>
             </h1>
@@ -148,12 +149,12 @@
                 Domina Photoshop y Premiere Pro. De cero a diseñador/editor profesional en un solo curso.
             </p>
 
-            <a href="#precio" class="neon-button text-lg font-bold py-3 px-8 rounded-lg uppercase tracking-wider bg-deep-black text-neon-green">
+            <a href="#precio" class="neon-button text-lg font-bold py-3 px-8 rounded-lg uppercase tracking-wider bg-deep-black text-neon-purple">
                 Comenzar Ahora
             </a>
 
             <!-- IMPLEMENTACIÓN DE VIDEO DE YOUTUBE EMBEBIDO CON EL EJEMPLO 'dQw4w9WgXcQ' -->
-            <div class="mt-12 w-11/12 max-w-lg aspect-video rounded-xl border-4 border-neon-green/70 shadow-[0_0_20px_rgba(57,255,20,0.6)] overflow-hidden">
+            <div class="mt-12 w-11/12 max-w-lg aspect-video rounded-xl border-4 border-neon-purple/70 shadow-[0_0_20px_rgba(212,0,255,0.6)] overflow-hidden">
                 <!-- Parámetros para autoplay + loop: autoplay=1, mute=1 (necesario en móviles), loop=1, playlist=ID. -->
                 <iframe 
                     class="w-full h-full"
@@ -168,7 +169,7 @@
         </section>
 
         <!-- SECCIÓN 2: CARACTERÍSTICAS CLAVE (SEO: Tutoriales y Recursos) -->
-        <section id="caracteristicas" class="py-16 sm:py-24 px-4 border-t border-neon-green/10">
+        <section id="caracteristicas" class="py-16 sm:py-24 px-4 border-t border-neon-purple/10">
             <div class="max-w-7xl mx-auto text-center">
                 <h2 class="section-title text-4xl sm:text-5xl inline-block mb-12 pb-2">
                     ¿QUÉ VAS A DOMINAR?
@@ -177,7 +178,7 @@
                 <!-- Las tarjetas se animarán con el script al final -->
                 <div class="grid md:grid-cols-3 gap-8 text-left">
                     <!-- Feature 1: Photoshop (Diseño Gráfico) -->
-                    <div class="feature-card p-6 rounded-xl border border-neon-green/50 bg-gray-900 shadow-xl transition duration-500 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+                    <div class="feature-card p-6 rounded-xl border border-neon-purple/50 bg-gray-900 shadow-xl transition duration-500 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(212,0,255,0.5)]">
                         <div class="neon-text text-4xl mb-4 transition duration-300 transform hover:rotate-2">
                             <!-- Icono simple de diseño gráfico -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -189,7 +190,7 @@
                     </div>
 
                     <!-- Feature 2: Premiere Pro (Edición de Video) -->
-                    <div class="feature-card p-6 rounded-xl border border-neon-green/50 bg-gray-900 shadow-xl transition duration-500 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+                    <div class="feature-card p-6 rounded-xl border border-neon-purple/50 bg-gray-900 shadow-xl transition duration-500 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(212,0,255,0.5)]">
                         <div class="neon-text text-4xl mb-4 transition duration-300 transform hover:rotate-2">
                             <!-- Icono simple de video -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -201,7 +202,7 @@
                     </div>
 
                     <!-- Feature 3: Recursos y Assets -->
-                    <div class="feature-card p-6 rounded-xl border border-neon-green/50 bg-gray-900 shadow-xl transition duration-500 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(57,255,20,0.5)]">
+                    <div class="feature-card p-6 rounded-xl border border-neon-purple/50 bg-gray-900 shadow-xl transition duration-500 hover:scale-[1.02] hover:shadow-[0_0_25px_rgba(212,0,255,0.5)]">
                         <div class="neon-text text-4xl mb-4 transition duration-300 transform hover:rotate-2">
                             <!-- Icono simple de descarga -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 inline-block" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -216,7 +217,7 @@
         </section>
         
         <!-- SECCIÓN 3: ESTRUCTURA DEL CURSO/MÓDULOS -->
-        <section id="modulos" class="py-16 sm:py-24 px-4 bg-gray-900/50 border-t border-b border-neon-green/10">
+        <section id="modulos" class="py-16 sm:py-24 px-4 bg-gray-900/50 border-t border-b border-neon-purple/10">
             <div class="max-w-7xl mx-auto">
                 <h2 class="section-title text-center text-4xl sm:text-5xl inline-block mb-12 pb-2">
                     EL CURSO EN DETALLE
@@ -225,32 +226,32 @@
                 <!-- Lista de Módulos: Aplicamos un hover más dinámico y animaciones de entrada a los textos -->
                 <div class="space-y-4 max-w-3xl mx-auto">
                     <!-- Módulo 1 -->
-                    <div class="p-4 rounded-lg bg-deep-black border border-neon-green/50 transition duration-300 hover:border-neon-green hover:shadow-[0_0_15px_rgba(57,255,20,0.4)]">
-                        <h4 class="text-xl font-heading text-neon-green flex justify-between items-center transition duration-500 hover:text-white hover:tracking-wider">
+                    <div class="p-4 rounded-lg bg-deep-black border border-neon-purple/50 transition duration-300 hover:border-neon-purple hover:shadow-[0_0_15px_rgba(212,0,255,0.4)]">
+                        <h4 class="text-xl font-heading text-neon-purple flex justify-between items-center transition duration-500 hover:text-white hover:tracking-wider">
                             MÓDULO 1: Fundamentos del Diseño Digital
                             <span class="text-sm font-sans text-gray-400">4 Horas</span>
                         </h4>
                         <p class="text-sm mt-2 text-gray-300">Introducción a la teoría del color, tipografía y composición visual. Flujo de trabajo esencial en ambos programas.</p>
                     </div>
                     <!-- Módulo 2 -->
-                    <div class="p-4 rounded-lg bg-deep-black border border-neon-green/50 transition duration-300 hover:border-neon-green hover:shadow-[0_0_15px_rgba(57,255,20,0.4)]">
-                        <h4 class="text-xl font-heading text-neon-green flex justify-between items-center transition duration-500 hover:text-white hover:tracking-wider">
+                    <div class="p-4 rounded-lg bg-deep-black border border-neon-purple/50 transition duration-300 hover:border-neon-purple hover:shadow-[0_0_15px_rgba(212,0,255,0.4)]">
+                        <h4 class="text-xl font-heading text-neon-purple flex justify-between items-center transition duration-500 hover:text-white hover:tracking-wider">
                             MÓDULO 2: Dominio de Photoshop (Gráfico)
                             <span class="text-sm font-sans text-gray-400">10 Horas</span>
                         </h4>
                         <p class="text-sm mt-2 text-gray-300">Capas, máscaras, herramientas de selección y efectos de texto. Creación de logos y mockups.</p>
                     </div>
                     <!-- Módulo 3 -->
-                    <div class="p-4 rounded-lg bg-deep-black border border-neon-green/50 transition duration-300 hover:border-neon-green hover:shadow-[0_0_15px_rgba(57,255,20,0.4)]">
-                        <h4 class="text-xl font-heading text-neon-green flex justify-between items-center transition duration-500 hover:text-white hover:tracking-wider">
+                    <div class="p-4 rounded-lg bg-deep-black border border-neon-purple/50 transition duration-300 hover:border-neon-purple hover:shadow-[0_0_15px_rgba(212,0,255,0.4)]">
+                        <h4 class="text-xl font-heading text-neon-purple flex justify-between items-center transition duration-500 hover:text-white hover:tracking-wider">
                             MÓDULO 3: Edición y Postproducción en Premiere Pro (Video)
                             <span class="text-sm font-sans text-gray-400">8 Horas</span>
                         </h4>
                         <p class="text-sm mt-2 text-gray-300">Edición no lineal, transiciones, corrección de color (Lumetri) y exportación optimizada para diferentes plataformas.</p>
                     </div>
                     <!-- Módulo 4 -->
-                    <div class="p-4 rounded-lg bg-deep-black border border-neon-green/50 transition duration-300 hover:border-neon-green hover:shadow-[0_0_15px_rgba(57,255,20,0.4)]">
-                        <h4 class="text-xl font-heading text-neon-green flex justify-between items-center transition duration-500 hover:text-white hover:tracking-wider">
+                    <div class="p-4 rounded-lg bg-deep-black border border-neon-purple/50 transition duration-300 hover:border-neon-purple hover:shadow-[0_0_15px_rgba(212,0,255,0.4)]">
+                        <h4 class="text-xl font-heading text-neon-purple flex justify-between items-center transition duration-500 hover:text-white hover:tracking-wider">
                             MÓDULO 4: Proyectos Finales y Recursos Extra
                             <span class="text-sm font-sans text-gray-400">Recursos + Live</span>
                         </h4>
@@ -268,34 +269,34 @@
                 </h2>
 
                 <!-- Tarjeta de Precio: AÑADIMOS ANIMACIÓN LIGERA AL SCROLL (clase 'price-card') -->
-                <div class="price-card bg-gray-900 p-8 rounded-2xl border-4 border-neon-green shadow-[0_0_40px_rgba(57,255,20,0.7)] transform hover:scale-[1.02] transition duration-500">
+                <div class="price-card bg-gray-900 p-8 rounded-2xl border-4 border-neon-purple shadow-[0_0_40px_rgba(212,0,255,0.7)] transform hover:scale-[1.02] transition duration-500">
                     <p class="text-lg uppercase text-gray-400 font-heading tracking-widest mb-2">Edición Completa</p>
                     
                     <div class="flex justify-center items-end mb-4">
                         <!-- El precio animará con un pequeño rebote (clase animada en JS) -->
                         <span class="text-6xl font-extrabold line-through text-gray-500 mr-4">$299</span>
-                        <span class="text-8xl font-heading text-neon-green tracking-wider">$99</span>
+                        <span class="text-8xl font-heading text-neon-purple tracking-wider">$99</span>
                     </div>
                     
                     <p class="text-sm text-gray-300 mb-6">Pago único. Acceso ilimitado de por vida a todos los tutoriales, recursos y futuras actualizaciones.</p>
 
                     <ul class="text-left space-y-2 text-md mb-8 text-gray-200">
-                        <li class="flex items-center transition duration-300 hover:text-neon-green hover:translate-x-1">
-                            <span class="text-neon-green mr-3">&#9658;</span> 22 horas de contenido en video HD.
+                        <li class="flex items-center transition duration-300 hover:text-neon-purple hover:translate-x-1">
+                            <span class="text-neon-purple mr-3">&#9658;</span> 22 horas de contenido en video HD.
                         </li>
-                        <li class="flex items-center transition duration-300 hover:text-neon-green hover:translate-x-1">
-                            <span class="text-neon-green mr-3">&#9658;</span> Biblioteca de recursos (Photoshop y Premiere).
+                        <li class="flex items-center transition duration-300 hover:text-neon-purple hover:translate-x-1">
+                            <span class="text-neon-purple mr-3">&#9658;</span> Biblioteca de recursos (Photoshop y Premiere).
                         </li>
-                        <li class="flex items-center transition duration-300 hover:text-neon-green hover:translate-x-1">
-                            <span class="text-neon-green mr-3">&#9658;</span> Certificado de Finalización.
+                        <li class="flex items-center transition duration-300 hover:text-neon-purple hover:translate-x-1">
+                            <span class="text-neon-purple mr-3">&#9658;</span> Certificado de Finalización.
                         </li>
-                        <li class="flex items-center transition duration-300 hover:text-neon-green hover:translate-x-1">
-                            <span class="text-neon-green mr-3">&#9658;</span> Soporte por Email prioritario.
+                        <li class="flex items-center transition duration-300 hover:text-neon-purple hover:translate-x-1">
+                            <span class="text-neon-purple mr-3">&#9658;</span> Soporte por Email prioritario.
                         </li>
                     </ul>
 
                     <!-- Botón corregido para evitar la función alert() -->
-                    <button class="neon-button w-full text-xl font-bold py-4 px-8 rounded-lg uppercase tracking-wider bg-deep-black text-neon-green" onclick="console.log('CTA Clicked: Proceeding to checkout.')">
+                    <button class="neon-button w-full text-xl font-bold py-4 px-8 rounded-lg uppercase tracking-wider bg-deep-black text-neon-purple" onclick="console.log('CTA Clicked: Proceeding to checkout.')">
                         ¡QUIERO MI CURSO AHORA!
                     </button>
                     <!-- Nota importante sobre la conversión -->
@@ -307,12 +308,12 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="py-8 px-4 bg-deep-black border-t border-neon-green/30 text-center text-sm text-gray-500">
+    <footer class="py-8 px-4 bg-deep-black border-t border-neon-purple/30 text-center text-sm text-gray-500">
         <p class="text-lg font-heading neon-text tracking-widest mb-4">4 DIGITAL ESSENCE</p>
         <p>&copy; 2025. Todos los derechos reservados.</p>
         <div class="mt-4 space-x-4">
-            <a href="#" class="text-gray-400 hover:text-neon-green transition duration-300">Términos y Condiciones</a>
-            <a href="#" class="text-gray-400 hover:text-neon-green transition duration-300">Política de Privacidad</a>
+            <a href="#" class="text-gray-400 hover:text-neon-purple transition duration-300">Términos y Condiciones</a>
+            <a href="#" class="text-gray-400 hover:text-neon-purple transition duration-300">Política de Privacidad</a>
         </div>
     </footer>
     
